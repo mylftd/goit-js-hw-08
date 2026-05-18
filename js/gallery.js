@@ -94,7 +94,8 @@ function onGalleryClick(event) {
   const img = event.target.closest('.gallery-image');
   if (!img) return;
 
-  const { source, alt } = img.dataset;
+  const source = img.dataset.source;
+  const alt = img.alt;
   console.log(source);
 
   const instance = basicLightbox.create(
